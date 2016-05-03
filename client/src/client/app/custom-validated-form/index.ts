@@ -1,0 +1,1 @@
+export {CustomValidatedFormComponent} from './custom-validated-form.component';

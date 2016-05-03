@@ -1,0 +1,11 @@
+form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.username-email-taken {
+  color: red;
+  font-style: italic;
+}

@@ -1,0 +1,1 @@
+export {ValidatedFormComponent} from './validated-form.component';

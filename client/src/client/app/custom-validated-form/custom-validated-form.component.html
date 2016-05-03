@@ -1,0 +1,25 @@
+<h2>Custom Validated Form</h2>
+
+<form [ngFormModel]="registrationForm" (ngSubmit)="registerUser(registrationForm.value)">
+  
+  <div class="form-group" [ngClass]="{ 'has-error' : username.hasError('usernameTaken') }">
+    <label for="username">Username</label>
+    <span *ngIf="username.hasError('usernameTaken')" class="username-email-taken">Username is taken</span>
+    <input type="text" class="form-control" placeholder="Username" ngControl="username">
+  </div>
+
+  <div class="form-group" [ngClass]="{ 'has-error' : email.hasError('emailTaken') }">
+    <label for="email">Email</label>
+    <span *ngIf="email.hasError('emailTaken')" class="username-email-taken">Email is taken</span>
+    <input type="text" class="form-control" placeholder="Email" ngControl="email">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" placeholder="Password" ngControl="password">
+  </div>
+  
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+</form>
